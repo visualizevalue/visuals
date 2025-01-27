@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="none" style="background: black;">
+  <defs>
+    <circle id="circle" cx="500" cy="500" r="45" stroke-width="5" />
+  </defs>
+
+  <rect width="1000" height="1000" fill="black"/>
+
+  <ellipse cx="320" cy="500" rx="2" ry="45" stroke-width="5" stroke="white">
+    <animate attributeName="rx" values="45;0;45" dur="10s" begin="-5s" repeatCount="indefinite" />
+  </ellipse>
+
+  <ellipse cx="500" cy="500" rx="2" ry="45" stroke-width="5" stroke="white">
+    <animate attributeName="rx" values="45;0;45" dur="10s" begin="-2.5s" repeatCount="indefinite" />
+  </ellipse>
+
+  <ellipse cx="680" cy="500" rx="2" ry="45" stroke-width="5" stroke="white">
+    <animate attributeName="rx" values="45;0;45" dur="10s" repeatCount="indefinite" />
+  </ellipse>
+</svg>
