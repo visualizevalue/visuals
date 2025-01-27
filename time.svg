@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="none" style="background: black;">
+  <defs>
+    <circle id="circle" cx="500" cy="500" r="45" stroke-width="5" />
+  </defs>
+
+  <rect width="1000" height="1000" fill="black"/>
+
+  <use href="#circle" transform="translate(-180)" stroke="hsl(0, 0%, 20%)" />
+  <use
+    href="#circle"
+    stroke="hsl(0, 0%, 100%)"
+    stroke-dasharray="283"
+    stroke-dashoffset="0"
+    transform="translate(-180) rotate(-90 500 500)"
+  >
+    <animate id="third_0" begin="third_2.end" attributeName="stroke-dashoffset" from="283" to="566" dur="0.1s" fill="freeze" />
+    <animate id="third_1" begin="third_0.end" attributeName="opacity" from="0" to="1" dur="5s" fill="freeze" />
+    <animate id="third_2" begin="second_2.end" attributeName="stroke-dashoffset" from="566" to="283" dur="10s" fill="freeze" />
+    <animate begin="second_2.end+5s" attributeName="opacity" from="1" to="0" dur="5s" fill="freeze" />
+  </use>
+
+  <use href="#circle" stroke="hsl(0, 0%, 20%)" />
+  <use
+    href="#circle"
+    stroke="hsl(0, 0%, 100%)"
+    stroke-dasharray="283"
+    stroke-dashoffset="0"
+    transform="rotate(-90 500 500)"
+  >
+    <animate id="second_0" begin="third_2.end" attributeName="stroke-dashoffset" from="283" to="566" dur="0.1s" fill="freeze" />
+    <animate id="second_1" begin="second_0.end" attributeName="opacity" from="0" to="1" dur="5s" fill="freeze" />
+    <animate id="second_2" begin="first_2.end" attributeName="stroke-dashoffset" from="566" to="283" dur="10s" fill="freeze" />
+    <animate begin="first_2.end+5s" attributeName="opacity" from="1" to="0" dur="5s" fill="freeze" />
+  </use>
+
+
+  <use href="#circle" transform="translate(180)" stroke="hsl(0, 0%, 20%)" />
+  <use
+    href="#circle"
+    stroke="hsl(0, 0%, 100%)"
+    stroke-dasharray="283"
+    stroke-dashoffset="0"
+    transform="translate(180) rotate(-90 500 500)"
+  >
+    <animate id="first_0" begin="third_2.end" attributeName="stroke-dashoffset" from="283" to="566" dur="0.1s" fill="freeze" />
+    <animate id="first_1" begin="first_0.end" attributeName="opacity" from="0" to="1" dur="5s" fill="freeze" />
+    <animate id="first_2" begin="0s;first_1.end" attributeName="stroke-dashoffset" from="566" to="283" dur="10s" fill="freeze" />
+    <animate begin="5s;first_1.end+5s" attributeName="opacity" from="1" to="0" dur="5s" fill="freeze" />
+  </use>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="none" style="background: black;">
+  <defs>
+    <circle id="circle" cx="500" cy="500" r="45" stroke-width="5" />
+
+    <filter id="blur">
+      <feGaussianBlur>
+        <animate id="blur_start" begin="0s;blur_end.end+3s" attributeName="stdDeviation" from="0 0" to="50 0 " dur="8s" fill="freeze" />
+        <animate id="blur_hover" begin="blur_start.end" attributeName="stdDeviation" values="50 0; 39 0; 50 0" dur="8s" />
+        <animate id="blur_end" begin="blur_hover.end" attributeName="stdDeviation" from="50 0" to="0 0 " dur="8s" fill="freeze" />
+      </feGaussianBlur>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="1000" fill="black"/>
+
+  <!-- CENTER -->
+  <use href="#circle" stroke="white" />
+
+  <!-- LEFT & RIGHT -->
+  <g filter="url(#blur)">
+    <use href="#circle" transform="translate(-180)" stroke="white" />
+    <use href="#circle" transform="translate(180)" stroke="white" />
+  </g>
+</svg>
